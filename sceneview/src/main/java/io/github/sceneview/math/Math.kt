@@ -28,9 +28,11 @@ fun FloatArray.toScale() = this.let { (x, y, z) -> Scale(x, y, z) }
 fun FloatArray.toDirection() = this.let { (x, y, z) -> Direction(x, y, z) }
 fun FloatArray.toQuaternion() = this.let { (x, y, z, w) -> Quaternion(x, y, z, w) }
 fun FloatArray.toSize() = this.let { (x, y, z) -> Size(x, y, z) }
+fun FloatArray.toMat4() = Mat4.of(*this)
+fun DoubleArray.toMat4() = Mat4.of(*this.map { it.toFloat() }.toFloatArray())
 fun FloatArray.toTransform() = Transform.of(*this)
 fun DoubleArray.toTransform() = Transform.of(*this.map { it.toFloat() }.toFloatArray())
-fun Mat4.toDoubleArray() : DoubleArray = toFloatArray().map { it.toDouble() }.toDoubleArray()
+fun Mat4.toDoubleArray(): DoubleArray = toFloatArray().map { it.toDouble() }.toDoubleArray()
 val Mat4.quaternion: Quaternion get() = rotation(this).toQuaternion()
 
 operator fun Mat4.times(v: Float3) = (this * Float4(v, 1f)).xyz
