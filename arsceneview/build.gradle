@@ -47,7 +47,7 @@ dependencies {
     // SceneView
 //    api "io.github.sceneview:sceneview:0.9.0"
 //    api project(":sceneview")
-    api 'com.github.code76kb:sceneview-android:sceneViewTestV9-SNAPSHOT'
+//    api 'com.github.code76kb:sceneview-android:sceneViewTestV9-SNAPSHOT'
 
 
     // ARCore
