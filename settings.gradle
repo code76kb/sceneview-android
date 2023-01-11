@@ -4,10 +4,11 @@ dependencyResolutionManagement {
         mavenLocal()
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "SceneView"
-include ':sceneview'
+//include ':sceneview'
 include ':arsceneview'
 
 // Samples
