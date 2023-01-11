@@ -8,7 +8,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "SceneView"
-//include ':sceneview'
+include ':sceneview'
 include ':arsceneview'
 
 // Samples
