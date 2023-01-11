@@ -74,7 +74,7 @@ dependencies {
 
     // kotlin-math
     // TODO: Waiting for the 1.5.1 release -> Delete copied/pasted classes in math package when available
-//    api 'dev.romainguy:kotlin-math:1.5.1'
+    api 'dev.romainguy:kotlin-math:1.5.1'
 
     // Filament
     def filament_version = '1.25.1'

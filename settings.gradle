@@ -7,7 +7,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "SceneView"
 include ':sceneview'
-include ':arsceneview'
+//include ':arsceneview'
 
 //// Samples
 //include ':sample-ar-cloud-anchor'
