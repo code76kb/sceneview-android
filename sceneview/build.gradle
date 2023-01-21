@@ -115,4 +115,4 @@ dependencies {
     api "com.gorisse.thomas:android-view-lifecycle:1.0.5"
 }
 
-apply plugin: "com.vanniktech.maven.publish"
+//apply plugin: "com.vanniktech.maven.publish"
