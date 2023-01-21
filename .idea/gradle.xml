@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/arsceneview" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/sceneview" />
+            <option value="$PROJECT_DIR$/sceneview_1_0_0" />
           </set>
         </option>
       </GradleProjectSettings>
