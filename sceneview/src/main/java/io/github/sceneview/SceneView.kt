@@ -329,7 +329,7 @@ open class SceneView @JvmOverloads constructor(
         lifecycle.currentState = event.targetState
     }
 
-    override var _children = listOf<Node>()
+    override var children = listOf<Node>()
 
     // TODO: Move to internal when ViewRenderable is kotlined
     val viewAttachmentManager by lazy { ViewAttachmentManager(context, this) }
@@ -531,6 +531,7 @@ open class SceneView @JvmOverloads constructor(
     /** @see Scene.removeEntity */
     fun removeLight(@Entity light: Light) = scene.removeEntity(light)
 
+    @Deprecated("Deprecated in Java")
     override fun setBackgroundDrawable(background: Drawable?) {
         super.setBackgroundDrawable(background)
 
@@ -619,7 +620,7 @@ open class SceneView @JvmOverloads constructor(
             val pickedNode = allChildren
                 .mapNotNull { it as? ModelNode }
                 .firstOrNull { modelNode ->
-                    modelNode.model?.renderableEntities?.contains(pickedRenderable) == true
+                    pickedRenderable in modelNode.renderables
                 }
             onPickingCompleted.invoke(pickedNode, pickedRenderable)
         }
