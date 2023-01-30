@@ -217,6 +217,17 @@ class ArSession(
             }
         }
 
+    var geospatialEnabled: Boolean
+        get() = config.geospatialEnabled
+        set(value) {
+            if (geospatialEnabled != value) {
+                configure {
+                    it.geospatialEnabled = value
+                }
+            }
+        }
+
+
     /**
      * ### The behavior of the lighting estimation subsystem
      *
@@ -328,5 +339,15 @@ var Config.cloudAnchorEnabled
             Config.CloudAnchorMode.ENABLED
         } else {
             Config.CloudAnchorMode.DISABLED
+        }
+    }
+
+var Config.geospatialEnabled
+    get() = geospatialMode != Config.GeospatialMode.DISABLED
+    set(value) {
+        geospatialMode = if (value) {
+            Config.GeospatialMode.ENABLED
+        } else {
+            Config.GeospatialMode.DISABLED
         }
     }

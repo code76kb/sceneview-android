@@ -152,6 +152,14 @@ open class ArSceneView @JvmOverloads constructor(
             arSession?.cloudAnchorEnabled = value
         }
 
+    private var _geospatialEnabled = false
+    var geospatialEnabled: Boolean
+        get() = arSession?.geospatialEnabled ?: _geospatialEnabled
+        set(value) {
+            _geospatialEnabled = value
+            arSession?.geospatialEnabled = value
+        }
+
     private var _sessionLightEstimationMode = Config.LightEstimationMode.ENVIRONMENTAL_HDR
 
     /**
@@ -319,6 +327,7 @@ open class ArSceneView @JvmOverloads constructor(
             config.instantPlacementEnabled = _instantPlacementEnabled
             config.cloudAnchorEnabled = _cloudAnchorEnabled
             config.lightEstimationMode = _sessionLightEstimationMode
+            config.geospatialEnabled = _geospatialEnabled
         }
 
         // Feature config, therefore facing direction, can only be configured once per session.
